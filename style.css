@@ -25,6 +25,9 @@
     font-family:helvetica; 
     text-align:center;
   }
+  tr:nth-child(even) {
+  background-color: #457842;
+  }
   th {
     margin: 20px auto;
     font-family:helvetica; 
