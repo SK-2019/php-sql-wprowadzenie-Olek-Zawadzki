@@ -95,3 +95,15 @@
     
                 echo("<h2>Sortowanie</h2>");
                 echo("<hr />");
+    
+                echo("<h3>Pracownicy posortowani malejąco wg imienia</h3>");
+        $sql=('SELECT * FROM pracownicy,organizacja where  dzial=id_org group by nazwa_dzial order by imie desc');
+            $result=$conn->query($sql);
+                echo("<table border=1>");
+                echo("<li>SQL: $sql");
+                echo("<th>id</th>");
+                echo("<th>imie</th>");
+                echo("<th>dzial</th>");
+                echo("<th>zarobki</th>");
+                echo("<th>nazwa_dzial</th>");
+                echo("<th>data_urodzenia</th>");
