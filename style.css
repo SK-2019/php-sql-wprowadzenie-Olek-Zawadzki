@@ -1,0 +1,58 @@
+ body {
+    background-color: lightwheat;
+  } 
+  table, th, td {
+    border: 4px solid black;
+  }
+  td {
+    text-align: center;
+    background-color: lightgreen;
+    color:blaCK;
+  }
+  th {
+    background-color: green;
+    color: white;
+  }
+  table {
+    border-collapse: collapse;
+  }
+  hr {
+    border: 2px solid black;
+  }
+  h1 {
+    font-size:40px; 
+    margin: 20px auto;
+    font-family:helvetica; 
+    text-align:center;
+  }
+  th {
+    margin: 20px auto;
+    font-family:helvetica; 
+    text-align:center;
+  }
+  td {
+    margin: 20px auto;
+    font-family:helvetica; 
+    text-align:center;
+  }
+  table {
+    margin: 20px auto;
+    font-family:helvetica; 
+    text-align:center;
+  }
+  h3 {
+    margin: 20px auto;
+    font-family:helvetica; 
+    text-align:center;
+  }
+  li {
+    margin: 20px auto;
+    font-family:helvetica; 
+    text-align:center;
+  }
+  a {
+    color: red;
+  }
+  .nav_link{
+    color: lightgreen;
+  }
