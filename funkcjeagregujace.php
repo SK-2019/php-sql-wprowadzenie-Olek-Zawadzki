@@ -148,3 +148,5 @@ echo("<hr />");
             }
         echo("</table>");
 echo("<hr />");
+ $sql=('SELECT nazwa_dzial,count(zarobki) as ilosc from pracownicy,organizacja where dzial=id_org group by dzial');
+    $result=$conn->query($sql);
