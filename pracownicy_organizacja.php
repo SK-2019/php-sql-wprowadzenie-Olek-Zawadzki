@@ -92,3 +92,6 @@
                     }
                 echo("</table>");
                 echo("<hr />");
+    
+                echo("<h2>Sortowanie</h2>");
+                echo("<hr />");
