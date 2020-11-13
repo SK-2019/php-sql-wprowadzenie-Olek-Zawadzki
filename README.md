@@ -1,2 +1,2 @@
 # PHP-SQL-wprowadzenie
-https://php-sql-wprowadzenie.herokuapp.com/
+https://zawadzki-olek.herokuapp.com/
