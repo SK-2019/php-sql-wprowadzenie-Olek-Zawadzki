@@ -112,15 +112,16 @@
                         echo("</table>");
                         echo("<hr />");
 
-                        echo("<h3>Suma lat mężczyzn</h3>");
-                        $sql=('SELECT SUM(YEAR(CURDATE()) - YEAR(data_urodzenia)) as Suma from pracownicy where imie not like "%a"');
+                        echo("<h3>Suma lat pracowników w poszczególnych działach  </h3>");
+                        $sql=('SELECT nazwa_dzial,sum(YEAR(CURDATE()) - YEAR(data_urodzenia)) as Suma from pracownicy,organizacja where dzial=id_org group by dzial');
                     $result=$conn->query($sql);
                         echo("<table border=1>");
                         echo("<li>SQL: $sql");
                         echo("<th>Suma</th>");
+                        echo("<th>nazwa działu</th>");
                             while($row=$result->fetch_assoc()){
                                 echo("<tr>");
-                                    echo("<td>".$row['Suma']."</td>");
+                                    echo("<td>".$row['Suma']."</td><td>".$row['nazwa_dzial']."</td>");
                                 echo("</tr>");
                             }
                         echo("</table>");
