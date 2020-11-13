@@ -164,3 +164,8 @@ echo("<hr />");
 echo("<hr />");
             $sql=('SELECT nazwa_dzial,avg(zarobki) as srednia from pracownicy,organizacja where dzial=id_org group by dzial');
     $result=$conn->query($sql);
+        echo("<h3>Średnie zarobków w poszczególnych działach</h3>");
+        echo("<table border=1>");
+        echo("<li>SQL: $sql");
+        echo("<th>srednia</th>");
+        echo("<th>nazwa działu</th>");
