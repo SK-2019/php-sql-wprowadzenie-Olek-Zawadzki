@@ -54,3 +54,15 @@
                     }
                 echo("</table>");
                 echo("<hr />");
+    
+                echo("<h3>Lista kobiet z nazwami działów</h3>");
+        $sql=('SELECT * FROM pracownicy,organizacja where imie like "%a" and dzial=id_org group by nazwa_dzial');
+            $result=$conn->query($sql);
+                echo("<table border=1>");
+                echo("<li>SQL: $sql");
+                echo("<th>id</th>");
+                echo("<th>imie</th>");
+                echo("<th>dzial</th>");
+                echo("<th>zarobki</th>");
+                echo("<th>nazwa_dzial</th>");
+                echo("<th>data_urodzenia</th>");
