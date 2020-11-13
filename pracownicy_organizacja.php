@@ -13,3 +13,8 @@
 </div>
 <h1>Olek Zawadzki 2ti 31</h1>
 <h2>Pracownicy i Organizacja</h2> 
+
+    <?php
+                echo("<hr />");
+                echo("<h3>Pracownicy z nazwą działów</h3>");
+                require_once('conn.php');
