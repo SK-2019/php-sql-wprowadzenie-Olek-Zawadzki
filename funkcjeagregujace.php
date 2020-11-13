@@ -117,3 +117,19 @@ echo("<hr />");
             }
         echo("</table>");
 echo("<hr />");
+ $sql=('SELECT nazwa_dzial,count(imie) as ilosc from pracownicy,organizacja where imie like "%a" and dzial=id_org and dzial=1 or dzial=3 group by dzial');
+    $result=$conn->query($sql); 
+        echo("<h3>Ile kobiet pracuje łącznie w działach 1 i 3</h3>");
+        echo("<table border=1>");
+        echo("<li>SQL: $sql");
+        echo("<th>ilosc</th>");
+        echo("<th>nazwa działu</th>");
+            while($row=$result->fetch_assoc()){
+                echo("<tr>");
+                    echo("<td>".$row['ilosc']."</td><td>".$row['nazwa_dzial']."</td>");
+                echo("</tr>");
+            }
+        echo("</table>");
+echo("<hr />");
+            echo("<h2>Group by</h2>");
+            echo("<hr />");
