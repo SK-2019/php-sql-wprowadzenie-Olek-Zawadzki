@@ -182,3 +182,8 @@ echo("<hr />");
     
             $sql=('SELECT nazwa_dzial,sum(zarobki)as suma from pracownicy, organizacja where dzial=id_org GROUP BY nazwa_dzial HAVING sum(zarobki) < 28 ');
     $result=$conn->query($sql);
+        echo("<h3>Suma zarobków w poszczególnych działach mniejsza od 28</h3>");
+        echo("<table border=1>");
+        echo("<li>SQL: $sql");
+        echo("<th>suma</th>");
+        echo("<th>nazwa działu</th>");
