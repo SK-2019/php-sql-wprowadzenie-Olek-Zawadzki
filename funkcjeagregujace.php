@@ -202,3 +202,10 @@ echo("<hr />");
             echo("<li>SQL: $sql");
             echo("<th>średnia</th>");
             echo("<th>nazwa działu</th>");
+                while($row=$result->fetch_assoc()){
+                    echo("<tr>");
+                        echo("<td>".$row['suma']."</td><td>".$row['nazwa_dzial']."</td>");
+                    echo("</tr>");
+                }
+            echo("</table>");
+            echo("<hr>");
