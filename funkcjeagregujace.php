@@ -178,3 +178,7 @@ echo("<hr />");
 echo("<hr />");
             echo("<h2>Having</h2>");
             echo("<hr />");
+    
+    
+            $sql=('SELECT nazwa_dzial,sum(zarobki)as suma from pracownicy, organizacja where dzial=id_org GROUP BY nazwa_dzial HAVING sum(zarobki) < 28 ');
+    $result=$conn->query($sql);
