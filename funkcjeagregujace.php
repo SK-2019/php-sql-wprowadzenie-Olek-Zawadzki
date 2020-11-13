@@ -150,8 +150,15 @@ echo("<hr />");
 echo("<hr />");
         $sql=('SELECT nazwa_dzial,count(zarobki) as ilosc from pracownicy,organizacja where dzial=id_org group by dzial');
     $result=$conn->query($sql);
-        echo("<h3>Ilość pracowników w poszczególnych działach </h3>");//nazwa nad tabelą
+        echo("<h3>Ilość pracowników w poszczególnych działach </h3>");
         echo("<table border=1>");
         echo("<li>SQL: $sql");
         echo("<th>ilosc</th>");
         echo("<th>nazwa działu</th>");
+            while($row=$result->fetch_assoc()){
+                echo("<tr>");
+                    echo("<td>".$row['ilosc']."</td><td>".$row['nazwa_dzial']."</td>");
+                echo("</tr>");
+            }
+        echo("</table>");
+echo("<hr />");
