@@ -20,7 +20,7 @@
             $sql=('SELECT * ,YEAR(curdate())-YEAR(data_urodzenia) as wiek FROM pracownicy,organizacja where dzial=id_org');
                     $result=$conn->query($sql);
                         echo("<table border=1>");
-                        echo("<li>SQL: $sql");
+                        echo("<li> $sql");
                         echo("<th>id</th>");
                         echo("<th>imie</th>");
                         echo("<th>dzial</th>");
@@ -40,7 +40,7 @@
                         $sql=('SELECT * ,YEAR(curdate())-YEAR(data_urodzenia) as wiek FROM pracownicy,organizacja where dzial=id_org and nazwa_dzial="serwis"');
                     $result=$conn->query($sql);
                         echo("<table border=1>");
-                        echo("<li>SQL: $sql");
+                        echo("<li> $sql");
                         echo("<th>id</th>");
                         echo("<th>imie</th>");
                         echo("<th>dzial</th>");
@@ -60,7 +60,7 @@
                         $sql=('SELECT SUM(YEAR(CURDATE()) - YEAR(data_urodzenia)) as Suma from pracownicy');
                     $result=$conn->query($sql);
                         echo("<table border=1>");
-                        echo("<li>SQL: $sql");
+                        echo("<li> $sql");
                         echo("<th>Suma</th>");
                             while($row=$result->fetch_assoc()){
                                 echo("<tr>");
@@ -74,7 +74,7 @@
                         $sql=("SELECT sum(year(curdate())-year(data_urodzenia)) as Suma, nazwa_dzial from pracownicy, organizacja where dzial=id_org and nazwa_dzial='handel'");
                     $result=$conn->query($sql);
                         echo("<table border=1>");
-                        echo("<li>SQL: $sql");
+                        echo("<li> $sql");
                         echo("<th>Suma</th>");
                             while($row=$result->fetch_assoc()){
                                 echo("<tr>");
@@ -88,7 +88,7 @@
                         $sql=('SELECT SUM(YEAR(CURDATE()) - YEAR(data_urodzenia)) as Suma from pracownicy where imie like "%a"');
                     $result=$conn->query($sql);
                         echo("<table border=1>");
-                        echo("<li>SQL: $sql");
+                        echo("<li> $sql");
                         echo("<th>Suma</th>");
                             while($row=$result->fetch_assoc()){
                                 echo("<tr>");
@@ -102,7 +102,7 @@
                         $sql=('SELECT SUM(YEAR(CURDATE()) - YEAR(data_urodzenia)) as Suma from pracownicy where imie not like "%a"');
                     $result=$conn->query($sql);
                         echo("<table border=1>");
-                        echo("<li>SQL: $sql");
+                        echo("<li> $sql");
                         echo("<th>Suma</th>");
                             while($row=$result->fetch_assoc()){
                                 echo("<tr>");
@@ -116,7 +116,7 @@
                         $sql=('SELECT nazwa_dzial,sum(YEAR(CURDATE()) - YEAR(data_urodzenia)) as Suma from pracownicy,organizacja where dzial=id_org group by dzial');
                     $result=$conn->query($sql);
                         echo("<table border=1>");
-                        echo("<li>SQL: $sql");
+                        echo("<li> $sql");
                         echo("<th>Suma</th>");
                         echo("<th>nazwa działu</th>");
                             while($row=$result->fetch_assoc()){
@@ -131,7 +131,7 @@
                         $sql=('SELECT MAX(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek, nazwa_dzial from pracownicy,organizacja where id_org=dzial group by dzial');
                     $result=$conn->query($sql);
                         echo("<table border=1>");
-                        echo("<li>SQL: $sql");
+                        echo("<li> $sql");
                         echo("<th>wiek</th>");
                         echo("<th>nazwa działu</th>");
                             while($row=$result->fetch_assoc()){
@@ -146,7 +146,7 @@
                         $sql=('SELECT min(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek, nazwa_dzial from pracownicy,organizacja where dzial=id_org and nazwa_dzial="handel" or nazwa_dzial="serwis" group by nazwa_dzial');
                     $result=$conn->query($sql);
                         echo("<table border=1>");
-                        echo("<li>SQL: $sql");
+                        echo("<li> $sql");
                         echo("<th>wiek</th>");
                         echo("<th>nazwa działu</th>");
                             while($row=$result->fetch_assoc()){
@@ -161,7 +161,7 @@
                         $sql=('SELECT imie,min(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek, nazwa_dzial from pracownicy,organizacja where dzial=id_org and nazwa_dzial="handel" or nazwa_dzial="serwis" group by nazwa_dzial');
                     $result=$conn->query($sql);
                         echo("<table border=1>");
-                        echo("<li>SQL: $sql");
+                        echo("<li> $sql");
                         echo("<th>imie</th>");
                         echo("<th>wiek</th>");
                         echo("<th>nazwa działu</th>");
@@ -177,7 +177,7 @@
                         $sql=('SELECT imie,DATEDIFF(CURDATE(),data_urodzenia) as dni_zycia from pracownicy');
                     $result=$conn->query($sql);
                         echo("<table border=1>");
-                        echo("<li>SQL: $sql");
+                        echo("<li> $sql");
                         echo("<th>imię</th>");
                         echo("<th>dni życia</th>");
                             while($row=$result->fetch_assoc()){
@@ -192,7 +192,7 @@
                 $sql=('SELECT * From pracownicy, organizacja where imie not like "%a" and dzial=id_org order by data_urodzenia asc limit 1');
                     $result=$conn->query($sql);
                         echo("<table border=1>");
-                        echo("<li>SQL: $sql");
+                        echo("<li> $sql");
                         echo("<th>id</th>");
                         echo("<th>imie</th>");
                         echo("<th>dzial</th>");
@@ -207,7 +207,7 @@
                         echo("</table>");
                         echo("<hr />");
                         
-                        echo("<h2>Formatowanie Dat</h2>");
+                
             echo("<hr />");
 
 
