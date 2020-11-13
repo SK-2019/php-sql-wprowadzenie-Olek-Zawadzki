@@ -35,3 +35,15 @@
                     }
                 echo("</table>");
                 echo("<hr />");
+    
+                echo("<h3>Pracownicy tylko z działu 1 i 4</h3>");
+        $sql=('SELECT * FROM pracownicy,organizacja where dzial=id_org and (dzial=1 or dzial=4)');
+            $result=$conn->query($sql);
+                echo("<table border=1>");
+                echo("<li>SQL: $sql");
+                echo("<th>id</th>");
+                echo("<th>imie</th>");
+                echo("<th>dzial</th>");
+                echo("<th>zarobki</th>");
+                echo("<th>nazwa_dzial</th>");
+                echo("<th>data_urodzenia</th>");
