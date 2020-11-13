@@ -88,3 +88,17 @@
             echo("</table>");
     echo("<hr />");
     
+      $sql=('SELECT nazwa_dzial,avg(zarobki) as srednia from pracownicy,organizacja where imie not like "%a" and dzial=1 or dzial=2 and dzial=id_org group by nazwa_dzial');
+    $result=$conn->query($sql); 
+        echo("<h3>Średnia zarobków mężczyzn z działu 1 i 2</h3>");
+        echo("<table border=1>");
+        echo("<li>SQL: $sql");
+        echo("<th>srednia</th>");
+        echo("<th>nazwa działu</th>");
+            while($row=$result->fetch_assoc()){
+                echo("<tr>");
+                    echo("<td>".$row['srednia']."</td><td>".$row['nazwa_dzial']."</td>");
+                echo("</tr>");
+            }
+        echo("</table>");
+echo("<hr />");
