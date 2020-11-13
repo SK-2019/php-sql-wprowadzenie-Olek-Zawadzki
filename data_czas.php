@@ -69,3 +69,17 @@
                             }
                         echo("</table>");
                         echo("<hr />");
+
+                        echo("<h3>Suma lat pracowników z działu handel</h3>");
+                        $sql=("SELECT sum(year(curdate())-year(data_urodzenia)) as Suma, nazwa_dzial from pracownicy, organizacja where dzial=id_org and nazwa_dzial='handel'");
+                    $result=$conn->query($sql);
+                        echo("<table border=1>");
+                        echo("<li>SQL: $sql");
+                        echo("<th>Suma</th>");
+                            while($row=$result->fetch_assoc()){
+                                echo("<tr>");
+                                    echo("<td>".$row['Suma']."</td>");
+                                echo("</tr>");
+                            }
+                        echo("</table>");
+                        echo("<hr />");
