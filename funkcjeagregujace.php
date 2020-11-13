@@ -13,3 +13,19 @@
 </div>
 <h1>Olek Zawadzki 2ti 31</h1>
 <h2>Funkcje Agregujące</h2>
+<?php
+             echo("<hr />");
+             require_once('conn.php');
+            $sql=('SELECT sum(zarobki) as suma from pracownicy');
+            $result=$conn->query($sql); //mysql
+                echo("<h3>Suma zarobków wszystkich pracowników</h3>");//nazwa nad tabelą
+                echo("<table border=1>");
+                echo("<li>SQL: $sql");
+                echo("<th>suma</th>");
+                    while($row=$result->fetch_assoc()){
+                        echo("<tr>");
+                            echo("<td>".$row['suma']."</td>");
+                        echo("</tr>");
+                    }
+                echo("</table>");
+        echo("<hr />");
