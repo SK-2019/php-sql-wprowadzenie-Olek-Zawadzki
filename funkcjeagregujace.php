@@ -102,3 +102,18 @@
             }
         echo("</table>");
 echo("<hr />");
+    
+    $sql=('SELECT nazwa_dzial,count(imie) as ilosc from pracownicy,organizacja where dzial=id_org');
+    $result=$conn->query($sql); 
+        echo("<h3>Ilu jest wszystkich pracowników</h3>");
+        echo("<table border=1>");
+        echo("<li>SQL: $sql");
+        echo("<th>ilosc</th>");
+        echo("<th>nazwa działu</th>");
+            while($row=$result->fetch_assoc()){
+                echo("<tr>");
+                    echo("<td>".$row['ilosc']."</td><td>".$row['nazwa_dzial']."</td>");
+                echo("</tr>");
+            }
+        echo("</table>");
+echo("<hr />");
