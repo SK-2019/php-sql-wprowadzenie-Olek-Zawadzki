@@ -57,3 +57,20 @@
             }
         echo("</table>");
     echo("<hr />");
+    
+    $sql=('SELECT nazwa_dzial,dzial,avg(zarobki) as srednia from pracownicy,organizacja where dzial=id_org');
+            $result=$conn->query($sql); 
+                echo("<h3>Średnia zarobków wszystkich mężczyzn</h3>");
+                echo("<table border=1>");
+                echo("<li>SQL: $sql");
+                echo("<th>srednia</th>");
+                echo("<th>nazwa działu</th>");
+                    while($row=$result->fetch_assoc()){
+                        echo("<tr>");
+                            echo("<td>".$row['srednia']."</td><td>".$row['nazwa_dzial']."</td>");
+                        echo("</tr>");
+                    }
+                echo("</table>");
+        echo("<hr />");
+
+    
