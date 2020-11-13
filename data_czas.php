@@ -142,3 +142,17 @@
                         echo("</table>");
                         echo("<hr />");
 
+                        echo("<h3>Najmłodsi pracownicy z działu: handel i serwis (nazwa_dział, wiek)</h3>");
+                        $sql=('SELECT min(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek, nazwa_dzial from pracownicy,organizacja where dzial=id_org and nazwa_dzial="handel" or nazwa_dzial="serwis" group by nazwa_dzial');
+                    $result=$conn->query($sql);
+                        echo("<table border=1>");
+                        echo("<li>SQL: $sql");
+                        echo("<th>wiek</th>");
+                        echo("<th>nazwa działu</th>");
+                            while($row=$result->fetch_assoc()){
+                                echo("<tr>");
+                                    echo("<td>".$row['wiek']."</td><td>".$row['nazwa_dzial']."</td>");
+                                echo("</tr>");
+                            }
+                        echo("</table>");
+                        echo("<hr />");
