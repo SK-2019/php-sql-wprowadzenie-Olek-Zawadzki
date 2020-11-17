@@ -2,6 +2,10 @@
 <html>
 <head>
 <link rel="stylesheet" href="style.css">
+  <form action="strona.php" method="POST">
+     <input type="text" name="asd"></br>
+     <input type="submit" value="wyślij do strona.php">
+  </form>
 </head>
 <body>
 <strong><a href=https://github.com/SK-2019/php-sql-wprowadzenie-Olek-Zawadzki>Github</a></strong>
