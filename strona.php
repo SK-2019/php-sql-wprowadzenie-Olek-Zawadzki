@@ -1,7 +1,7 @@
 <?php
 
-echo("to jest strona.php");
+echo("jesteś na strona.php");
 
-echo($_POST["name"]);
+echo($_POST["imie"]);
 
 ?>
