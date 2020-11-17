@@ -57,7 +57,7 @@
     
     echo("<h3>Pracownicy tylko z zarobkami mniejszymi niż 30</h3>");
         $sql=('SELECT * FROM pracownicy,organizacja where dzial=id_org and zarobki<30 group by nazwa_dzial');
-            $result=$conn->query($sql);//mysql
+            $result=$conn->query($sql);
                 echo("<table border=1>");
                 echo("<li>SQL: $sql");
                 echo("<th>id</th>");
