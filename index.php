@@ -12,7 +12,7 @@
     <a class="nav_link" href="data_czas.php">Data i Czas</a>
     <a class="nav_link" href="formularz.html">Formularze</a>
     <a class="nav_link" href="danedobazy.html">Dane Do Bazy</a>
-    <a class="nav_link" href="function.php">Function</a>
+    <a class="nav_link" href="function.php">Funkcja</a>
 </div>
 <h1>Olek Zawadzki 2ti 31</h1>
 <h2>Strona Startowa</h2> 
