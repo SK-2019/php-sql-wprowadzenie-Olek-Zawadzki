@@ -11,6 +11,7 @@
     <a class="nav_link" href="pracownicy_organizacja.php">Pracownicy i Organizacja</a>
     <a class="nav_link" href="data_czas.php">Data i Czas</a>
     <a class="nav_link" href="formularz.html">Formularze</a>
+    <a class="nav_link" href="danedobazy.html">Dane Do Bazy</a>
 </div>
 <h1>Olek Zawadzki 2ti 31</h1>
 <h2>Funkcje Agregujące</h2>
