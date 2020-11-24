@@ -3,7 +3,7 @@
 <head>
    <meta charset="utf-8">
    <link rel="stylesheet" href="style1.css">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="viewport" content="width=device-width>
 <a href=https://github.com/SK-2019/php-sql-wprowadzenie-Olek-Zawadzki>Github</a>
    <div class="nav">
    <a class="nav_link" href="index.php">Strona Główna</a>
