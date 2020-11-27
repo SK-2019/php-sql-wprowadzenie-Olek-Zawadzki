@@ -7,14 +7,29 @@ echo("<li>Data urodzenia: ".$_POST['data_ur']."</li>");
 
   require_once("connect.php");
 
-$sql = "INSERT INTO `pracownicy`(`id_pracownicy`, `imie`, `dzial`, `zarobki`, `data_urodzenia`) VALUES (null,"ania",2,60,"1985-12-11")";
-
-if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
-} else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
-}
-
-$conn->close();
-
+   $sql = "INSERT INTO pracownicy(`id_pracownicy`, `imie`, `dzial`, `zarobki`, `data_urodzenia`) VALUES(NULL,'".$_POST['imie']."', '".$_POST['dzial']."', '".$_POST['zarobki']."', '".$_POST['data_ur']."')";
+   if ($conn->query($sql) === TRUE) {
+    echo("<br>"); 
+    echo "New record created successfully";
+  } else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+  }
+ 
+ 
+ $sql=('SELECT * FROM pracownicy');
+    $result=$conn->query($sql);
+        echo("<hr />");
+        echo("<table border=1>");
+        echo("<th>id</th>");
+        echo("<th>imię</th>");
+        echo("<th>dział</th>");
+        echo("<th>zarobki</th>");
+        echo("<th>data urodzenia</th>");
+            while($row=$result->fetch_assoc()){
+                echo("<tr>");
+                    echo("<td>".$row['id_pracownicy']."</td><td>".$row['imie']."</td><td>".$row['dzial']."</td><td>".$row['zarobki']."</td><td>".$row['data_urodzenia']."</td>");
+                echo("</tr>");
+            }
+        echo("</table>");
+$conn->close(); 
 ?>
