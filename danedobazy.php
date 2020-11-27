@@ -35,6 +35,7 @@ echo("<table border=1>");
     echo("<th>Dzial</th>");
     echo("<th>Zarobki</th>");
     echo("<th>Data_urodzenia</th>");
+    echo("<th class=usuń>Usuń</th>");
         while($row=$result->fetch_assoc()){
             echo("<tr>");
             echo("<td>".$row["id_pracownicy"]."</td><td>".$row["imie"]."</td><td>".$row["dzial"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td>");
