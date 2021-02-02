@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 <strong><a href=https://github.com/SK-2019/php-sql-wprowadzenie-Olek-Zawadzki>Github</a></strong>
 <div class="nav">
-    <a class="nav_link" href="pracownicy.php">Pracownicy - wstęp</a>
-    <a class="nav_link" href="funkcjeagregujace.php">Funkcje Agregujące</a>
-    <a class="nav_link" href="pracownicy_organizacja.php">Pracownicy i Organizacja</a>
-    <a class="nav_link" href="data_czas.php">Data i Czas</a>
-    <a class="nav_link" href="formularz.html">Formularze</a>
-    <a class="nav_link" href="danedobazy.php">Dane Do Bazy</a>
-    <a class="nav_link" href="function.php">Funkcja</a>
+    <a class="nav_link" href="pracownicy/pracownicy.php">Pracownicy - wstęp</a>
+    <a class="nav_link" href="pracownicy/funkcjeagregujace.php">Funkcje Agregujące</a>
+    <a class="nav_link" href="pracownicy/pracownicy_organizacja.php">Pracownicy i Organizacja</a>
+    <a class="nav_link" href="pracownicy/data_czas.php">Data i Czas</a>
+    <a class="nav_link" href="pracownicy/formularz.html">Formularze</a>
+    <a class="nav_link" href="pracownicy/danedobazy.php">Dane Do Bazy</a>
+    <a class="nav_link" href="pracownicy/function.php">Funkcja</a>
 </div>
 <h1>Olek Zawadzki 2ti 31</h1>
 <h2>Strona Startowa</h2> 
     <?php
-   require_once('conn.php');
+   require_once('assets/conn.php');
   
     $sql=('SELECT * FROM pracownicy,organizacja where dzial=id_org');
     $result=$conn->query($sql);
