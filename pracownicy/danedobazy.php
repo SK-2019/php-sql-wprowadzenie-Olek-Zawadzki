@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../assets/style.css">
   <meta name="viewport" content="width=device-width">
   <a href=https://github.com/SK-2019/php-sql-wprowadzenie-Olek-Zawadzki>Github</a>
 </head>
@@ -27,7 +27,7 @@
 
 
 <?php
-require_once("conn.php");
+require_once("../assets/conn.php");
 $result=$conn->query("Select * from pracownicy");
 echo("<table border=1>");
     echo("<th>Id</th>");

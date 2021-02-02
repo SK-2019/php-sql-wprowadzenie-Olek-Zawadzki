@@ -1,5 +1,5 @@
 <?php
-require_once("conn.php");
+require_once("../assets/conn.php");
 $sql =  "DELETE FROM pracownicy where id_pracownicy='".$_POST['id']."'";
 echo($sql);
 echo($_POST['id']);
