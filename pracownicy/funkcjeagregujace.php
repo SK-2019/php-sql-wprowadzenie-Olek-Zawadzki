@@ -17,7 +17,7 @@
 <h2>Funkcje Agregujące</h2>
 <?php
              echo("<hr />");
-             require_once('conn.php');
+             require_once('../assets/conn.php');
             $sql=('SELECT sum(zarobki) as suma from pracownicy');
             $result=$conn->query($sql); 
                 echo("<h3>Suma zarobków wszystkich pracowników</h3>");

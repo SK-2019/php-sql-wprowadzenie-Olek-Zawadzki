@@ -24,7 +24,7 @@ function petla(){
 petla();
 
 function robocik($sql){
-    require_once("conn.php");
+    require_once("../assets/conn.php");
     $result=$conn->query($sql);
         echo("<table border=1>");
         echo("<li>SQL: $sql");

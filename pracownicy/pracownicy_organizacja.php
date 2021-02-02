@@ -19,7 +19,7 @@
     <?php
                 echo("<hr />");
                 echo("<h3>Pracownicy z nazwą działów</h3>");
-                require_once('conn.php');
+                require_once('../assets/conn.php');
         $sql=('SELECT * FROM pracownicy,organizacja where dzial=id_org group by nazwa_dzial');
             $result=$conn->query($sql);
                 echo("<table border=1>");
