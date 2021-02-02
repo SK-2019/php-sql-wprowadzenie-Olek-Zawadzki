@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>aaaa
+<head>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
