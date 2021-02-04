@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-<strong><a href=https://github.com/SK-2019/php-sql-wprowadzenie-Olek-Zawadzki>Github</a></strong>
-<div class="nav">
-    <a class="nav_link" href="pracownicy/pracownicy.php">Pracownicy - wstęp</a>
-    <a class="nav_link" href="pracownicy/funkcjeagregujace.php">Funkcje Agregujące</a>
-    <a class="nav_link" href="pracownicy/pracownicy_organizacja.php">Pracownicy i Organizacja</a>
-    <a class="nav_link" href="pracownicy/data_czas.php">Data i Czas</a>
-    <a class="nav_link" href="pracownicy/formularz.html">Formularze</a>
-    <a class="nav_link" href="pracownicy/danedobazy.php">Dane Do Bazy</a>
-    <a class="nav_link" href="pracownicy/function.php">Funkcja</a>
-</div>
-<h1>Olek Zawadzki 2ti 31</h1>
+    <div id="container">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+      Menu
+        </button>
+        <strong><a href=https://github.com/SK-2019/php-sql-wprowadzenie-Olek-Zawadzki>Github</a></strong>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="pracownicy/pracownicy.php">Pracownicy-wstęp</a>
+            <a class="dropdown-item" href="pracownicy/funkcjeagregujace.php">Funkcje Agregujące</a>
+            <a class="dropdown-item" href="pracownicy/pracownicy_organizacja.php">Pracownicy i Organizacja</a>
+            <a class="dropdown-item" href="pracownicy/data_czas.php">Data i Czas</a>
+            <a class="dropdown-item" href="pracownicy/formularz.html">Formularze</a>
+            <a class="dropdown-item" href="pracownicy/danedobazy.php">Dane Do Bazy</a>
+            <a class="dropdown-item" href="pracownicy/function.php">Funkcja</a>
+       <!-- </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> -->
+        </div>
+        <h1>Olek Zawadzki 2ti 31</h1>
 <h2>Strona Startowa</h2> 
     <?php
    require_once('assets/conn.php');
@@ -75,3 +91,10 @@ echo("<hr />");
         echo("</table>");
 echo("<hr />");
     ?>
+
+    </div>
+
+
+</body>
+</html>
+
