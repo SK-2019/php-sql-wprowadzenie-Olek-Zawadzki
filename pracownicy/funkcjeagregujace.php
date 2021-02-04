@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="../assets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-<strong><a href=https://github.com/SK-2019/php-sql-wprowadzenie-Olek-Zawadzki>Github</a></strong>
-<div class="nav">
-    <a class="nav_link" href="../index.php">Strona Startowa</a>
-    <a class="nav_link" href="pracownicy.php">Pracownicy - wstęp</a>
-    <a class="nav_link" href="pracownicy_organizacja.php">Pracownicy i Organizacja</a>
-    <a class="nav_link" href="data_czas.php">Data i Czas</a>
-    <a class="nav_link" href="formularz.html">Formularze</a>
-    <a class="nav_link" href="danedobazy.html">Dane Do Bazy</a>
+<div id="container">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+      Menu
+    </button>
+        <strong><a href=https://github.com/SK-2019/php-sql-wprowadzenie-Olek-Zawadzki>Github</a></strong>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="../index.php">Strona Startowa</a>
+            <a class="dropdown-item" href="pracownicy.php">Pracownicy - wstęp</a>
+            <a class="dropdown-item" href="pracownicy_organizacja.php">Pracownicy i Organizacja</a>
+            <a class="dropdown-item" href="data_czas.php">Data i Czas</a>
+            <a class="dropdown-item" href="formularz.html">Formularze</a>
+            <a class="dropdown-item" href="danedobazy.html">Dane Do Bazy</a>
 </div>
 <h1>Olek Zawadzki 2ti 31</h1>
 <h2>Funkcje Agregujące</h2>
