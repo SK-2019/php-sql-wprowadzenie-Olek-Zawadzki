@@ -14,7 +14,7 @@
     <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
       Menu
     </button>
-        <strong><a href=https://github.com/SK-2019/php-sql-wprowadzenie-Olek-Zawadzki>Github</a></strong>
+        <strong><a href="https://github.com/SK-2019/php-sql-wprowadzenie-Olek-Zawadzki" target="_blank">Github</a></strong>
         <div class="dropdown-menu">
             <a class="dropdown-item" href="../index.php">Strona Startowa</a>
             <a class="dropdown-item" href="pracownicy.php">Pracownicy - wstęp</a>
