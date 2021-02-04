@@ -2,12 +2,28 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="../assets/style.css">
-  <meta name="viewport" content="width=device-width">
-  <a href=https://github.com/SK-2019/php-sql-wprowadzenie-Olek-Zawadzki>Github</a>
-  <title>JS Bin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
+<div id="container">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+      Menu
+        </button>
+        <strong><a href="https://github.com/SK-2019/php-sql-wprowadzenie-Olek-Zawadzki" target="_blank">Github</a></strong>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="../index.php">Strona Startowa</a>
+            <a class="dropdown-item" href="funkcjeagregujace.php">Funkcje Agregujące</a>
+            <a class="dropdown-item" href="pracownicy_organizacja.php">Pracownicy i Organizacja</a>
+            <a class="dropdown-item" href="data_czas.php">Data i Czas</a>
+            <a class="dropdown-item" href="formularz.html">Formularze</a>
+            <a class="dropdown-item" href="danedobazy.html">Dane Do Bazy</a>
+</div>
   <form action="strona.php" method="POST">
      <input type="text" name="imie" placeholder="imie"></br>
      <input type="text" name="dzial" placeholder="dzial" ></br>
